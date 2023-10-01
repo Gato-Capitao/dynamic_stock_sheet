@@ -9,4 +9,6 @@ def get_current_price(action:Ticker) -> float:
     price = action.info["currentPrice"]
     return price
 
+
+
 print(get_current_price(Ticker("MXRF11.SA")))

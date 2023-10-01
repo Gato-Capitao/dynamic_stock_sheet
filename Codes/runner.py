@@ -1,5 +1,5 @@
-from organizer import read_sheet
+from organizer import get_list_of_actions
 
 
 if __name__ == "__main__":
-    print(read_sheet("D:\Codes\Projetos Github\Planilha-de-renda-variavel-inteligente\Codes\data_table.xlsx", "Sheet1"))
+    print(get_list_of_actions("D:\Codes\Projetos Github\Planilha-de-renda-variavel-inteligente\Codes\data_table.xlsx", "Sheet1"))
