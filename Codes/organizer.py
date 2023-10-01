@@ -1,7 +1,7 @@
-from pandas import read_excel, DataFrame
+from pandas import DataFrame
+from collections import deque
 
-def get_list_of_actions(path:str, sheet:str) -> DataFrame:
-    table = read_excel(path, sheet_name=sheet)
-    
-    return table.columns
+def get_list_of_actions(table:DataFrame) -> deque:
+    return deque(table["Nome"])
+
 
