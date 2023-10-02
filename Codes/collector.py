@@ -11,4 +11,3 @@ def get_current_price(action:Ticker) -> float:
 
 
 
-print(get_current_price(Ticker("MXRF11.SA")))
