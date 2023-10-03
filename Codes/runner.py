@@ -5,9 +5,10 @@ path="D:\Codes\Projetos Github\Planilha-de-renda-variavel-inteligente\Codes\data
 name="Sheet1"
 
 table = read_excel(path, sheet_name=name)
-
+print(table["Preço"])
 
 if __name__ == "__main__":
+
     deque_actions = get_list_of_actions(table)
 
     for pos, action_name in enumerate(deque_actions):
