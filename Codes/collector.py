@@ -9,5 +9,40 @@ def get_current_price(action:Ticker) -> float:
     price = action.info["currentPrice"]
     return price
 
+def get_currency(action:Ticker) -> str:
+    currency = action.info["currency"]
+
+    return currency
+
+def get_industry_type(action:Ticker) -> str:
+    industry=action.info["industry"]
+
+    return industry
+
+def get_sector(action:Ticker) -> str:
+    sector = action.info["sector"]
+
+    return sector
+
+def get_average(action:Ticker) -> float:
+    fifty_average = action.info["fiftyDayAverage"]
+
+    return fifty_average
+
+def get_div_rate(action:Ticker) -> float:
+    rate=action.info["dividendRate"]
+
+    return rate
+
+def get_div_yields(action:Ticker) -> float:
+    yields = action.info["dividendYield"]
+
+    return yields
+
+def get_price_to_earnings(action:Ticker) -> float:
+    pe = action.info["trailingPE"]
+
+    return pe
+
 
 
