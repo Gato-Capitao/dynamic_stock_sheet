@@ -42,6 +42,21 @@ def update_action(table:DataFrame, action_pos:int, action_name:str) -> None:
         except KeyError:
             continue
 
+def update_columns_datatype(table:DataFrame) -> None:
+    columns_datatypes={
+        "Sector":str,
+        "Industry":str,
+        "Currency":str,
+        "Price":float,
+        "Fifity day average":float,
+        "Div rate":float,
+        "Div yield":float,
+        "PE":float,
+        "Book value":float
+    }
+    for column_name, column_type in columns_datatypes.items():
+        table[column_name] = table[column_name].astype(column_type)
+
 
     
 
