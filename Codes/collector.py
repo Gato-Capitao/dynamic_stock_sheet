@@ -44,5 +44,8 @@ def get_price_to_earnings(action:Ticker) -> float:
 
     return pe
 
+def get_book_value(action:Ticker) -> float:
+    book_value = action.info["bookValue"]
 
+    return book_value
 

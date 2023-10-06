@@ -1,6 +1,6 @@
 from pandas import DataFrame
 from collections import deque
-from collector import get_current_price, get_average, get_currency, get_div_rate, get_div_yields, get_industry_type, get_price_to_earnings, get_sector
+from collector import get_current_price, get_average, get_currency, get_div_rate, get_div_yields, get_industry_type, get_price_to_earnings, get_sector, get_book_value
 from yfinance import Ticker
 
 def get_list_of_actions(table:DataFrame, collum_name:str) -> deque:
@@ -31,7 +31,8 @@ def update_action(table:DataFrame, action_pos:int, action_name:str) -> None:
         "Fifity day average":get_average,
         "Div rate":get_div_rate,
         "Div yield":get_div_yields,
-        "PE":get_price_to_earnings
+        "PE":get_price_to_earnings,
+        "Book value":get_book_value
     }
     action_ticker = Ticker(action_name)
 
@@ -39,7 +40,7 @@ def update_action(table:DataFrame, action_pos:int, action_name:str) -> None:
         try:
             table.loc[action_pos, info]=connector[info](action_ticker)
         except KeyError:
-            table.loc[action_pos, info]="NF"
+            continue
 
 
     
