@@ -1,14 +1,23 @@
+"""
+Hello :)
+
+This project makes it possible to take various information about actions and add them to a spreadsheet, it is also extremely flexible where you can use different information and in variable ways.
+
+GitHub: https://github.com/Gato-Capitao/Planilha-de-renda-variavel-inteligente
+"""
+
 from organizer import get_list_of_actions, update_action, update_columns_datatype
 from pandas import read_excel
 
-path=input("The path to the spreadsheet: ")
-name=input("The name of the sheet: ")
-
-table = read_excel(path, sheet_name=name)
-
-print("The sheet read:\n", table)
 
 if __name__ == "__main__":
+    #Read the table
+    path=input("The path to the spreadsheet: ")
+    name=input("The name of the sheet: ")
+
+    table = read_excel(path, sheet_name=name)
+    print("The sheet read:\n", table)#Show a preview
+
     #Update the columns data type
     update_columns_datatype(table)
 
