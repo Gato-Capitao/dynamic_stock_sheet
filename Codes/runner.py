@@ -3,7 +3,8 @@ Hello :)
 
 This project makes it possible to take various information about actions and add them to a spreadsheet, it is also extremely flexible where you can use different information and in variable ways.
 
-GitHub: https://github.com/Gato-Capitao/Planilha-de-renda-variavel-inteligente
+GitHub: https://github.com/Gato-Capitao/dynamic_stock_sheet
+Python: 3.11
 """
 
 from organizer import get_list_of_actions, update_action, update_columns_datatype

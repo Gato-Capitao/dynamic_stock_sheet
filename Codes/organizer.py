@@ -56,8 +56,3 @@ def update_columns_datatype(table:DataFrame) -> None:
     }
     for column_name, column_type in columns_datatypes.items():
         table[column_name] = table[column_name].astype(column_type)
-
-
-    
-
-

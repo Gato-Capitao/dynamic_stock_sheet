@@ -48,4 +48,3 @@ def get_book_value(action:Ticker) -> float:
     book_value = action.info["bookValue"]
 
     return book_value
-
