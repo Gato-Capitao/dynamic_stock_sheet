@@ -1,8 +1,8 @@
 from organizer import get_list_of_actions, update_action, update_columns_datatype
 from pandas import read_excel
 
-path="D:\Codes\Projetos Github\Planilha-de-renda-variavel-inteligente\Codes\data_table.xlsx"
-name="Sheet1"
+path=input("The path to the spreadsheet: ")
+name=input("The name of the sheet: ")
 
 table = read_excel(path, sheet_name=name)
 
@@ -19,7 +19,9 @@ if __name__ == "__main__":
         update_action(table, pos, action_name)
     
     #Convert to a xlsx format
-    table.to_excel("D:\Codes\Projetos Github\Planilha-de-renda-variavel-inteligente\Codes\data_table1.xlsx", index=False)
+    path=path[:-5]+"_updated"+".xlsx"
+
+    table.to_excel(path, index=False)
 
     #Show a preview of the table
     print("The updated sheet:\n", table)
